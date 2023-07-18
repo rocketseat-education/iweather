@@ -56,7 +56,7 @@ export async function getWeatherByCityService({ latitude, longitude }: SearchCit
     },
     details: {
       feels_like: `${Math.floor(main.feels_like)}ºc`,
-      probability: `${pop * 100}%`,
+      probability: `${Math.ceil(pop * 100)}%`,
       wind_speed: `${wind.speed}km/h`,
       humidity: `${main.humidity}%`,
       temp_kf: `${Math.floor(main.temp_kf)}`
